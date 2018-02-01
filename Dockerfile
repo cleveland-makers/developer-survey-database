@@ -1,4 +1,4 @@
-FROM icirellik/flyway-docker:5.0.7
+FROM icirellik/flyway-docker:4
 
 ENV DATABASE_IP=127.0.0.1 \
     DATABASE_NAME=cleveland_developer_survey \
@@ -10,4 +10,4 @@ WORKDIR /root
 
 ADD . /root
 
-ENTRYPOINT ["/root/migrate"]
+ENTRYPOINT ["/root/build/start.sh"]
